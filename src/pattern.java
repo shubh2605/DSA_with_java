@@ -116,6 +116,6 @@ public class pattern {
 //        squarepattern(4);
 //        righttriangle(4);
 //        alphabetic(4);
-        reversealphabetic(4);
+//        reversealphabetic(4);
     }
 }

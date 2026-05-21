@@ -97,17 +97,17 @@ public class pattern {
 //        }
 //    }
 
-    public static void reversealphabetic(int n){
-
-        for(int i=0;i<n;i++){
-            char ch='A';
-            for(int j=0;j<n-i;j++){
-                System.out.print(ch);
-                ch++;
-            }
-            System.out.println();
-        }
-    }
+//    public static void reversealphabetic(int n){
+//
+//        for(int i=0;i<n;i++){
+//            char ch='A';
+//            for(int j=0;j<n-i;j++){
+//                System.out.print(ch);
+//                ch++;
+//            }
+//            System.out.println();
+//        }
+//    }
     public static void main(String args[]){
 //        pyramid(4);
 //        reversepyramid(4);

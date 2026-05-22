@@ -108,6 +108,71 @@ public class pattern {
 //            System.out.println();
 //        }
 //    }
+
+//    public static void pyramid2(int n){
+//        for(int i=0;i<=n;i++){
+//            for(int j=0;j<i;j++){
+//                System.out.print("  ");
+//            }
+//            for(int j=0;j<2*(n-i)-1;j++){
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+//    }
+
+
+//    hollow square---------------------------
+//
+//    public static void hollowsq(int n){
+//        for(int i=0;i<n;i++){
+//            if(i==0 || i==n-1){
+//                for(int j=0;j<n;j++){
+//                    System.out.print("* ");
+//                }
+//            }else{
+//                for(int j=0;j<n;j++){
+//                    if(j==0 || j==n-1){
+//                        System.out.print("* ");
+//                    }else{
+//                        System.out.print("  ");
+//                    }
+//                }
+//            }
+//            System.out.println();
+//        }
+//    }
+
+//    hollow triangle pattern---------------------
+// public static void hollowtri(int n) {
+//    for (int i=0;i<n;i++) {
+//        for (int j = 0; j<n-i;j++) {
+//            System.out.print(" ");
+//        }
+//        for (int j=0;j<=i;j++) {
+//            if (j==0 || j==i || i==n-1) {
+//                System.out.print("* ");
+//            } else {
+//                System.out.print("  ");
+//            }
+//        }
+//        System.out.println();
+//    }
+//}
+
+
+//    staircase pattern-----------------------------------
+
+//    public static void staircase(int n){
+//        int value=2;
+//        for(int i=1;i<=n;i++){
+//            for(int j=1;j<=value;j++){
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//            if(i%2==0)value+=2;
+//        }
+//    }
     public static void main(String args[]){
 //        pyramid(4);
 //        reversepyramid(4);
@@ -117,5 +182,9 @@ public class pattern {
 //        righttriangle(4);
 //        alphabetic(4);
 //        reversealphabetic(4);
+//        pyramid2(4);
+//        hollowsq(4);
+//        hollowtri(5);
+//        staircase(6);
     }
 }

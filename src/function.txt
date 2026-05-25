@@ -1,0 +1,70 @@
+------fxn is a block of code use to run specific task
+    features:--------------
+    -increase readibility,
+    -inhance reusablility
+     -modularity
+     -easy to debug and test
+
+     components of fxn:--------
+     -access modifier
+     -list of paramters
+
+     context of fxn:
+     -global scope
+     -local scope
+     -lexical scope
+
+-------in java,we cant declare a fxn inside a fxn
+
+stack memory and heap---------------
+-Fxn and their local variable are created in stack memory
+-stack contains the stack frames made by fxn which contains its variable
+-object,refrence ,runtime data are stored in heap momory
+
+-stack memory is faster than heap memory
+
+Static variables must be declared outside of method.
+ If you try to use the static keyword to declare a variable inside a method, the compiler will throw an "illegal start of expression" error.
+
+public static void statisStudy(){
+
+        int d=190;       local scope variable
+        if(i%2==0){
+            itn r=101;   block scope variable
+        }
+}
+
+types of fxn---------------
+-public static void add(int a,int b) -------> parameterised fxn
+-public static void add() -------------->non parameterised fxn
+-recursive fxn(fxn calling itself)
+ex of recursion:
+class A{
+     public static void printNum(int n){
+            if(n==1) {
+                System.out.println(1);
+                return;
+            }
+            System.out.println(n);
+            printNum(n-1);
+        }
+}
+
+function overloading----------------
+two or more fxn of same name with diff no of parameters,if no of parameters will be same then the return type will be different.
+
+function overriding---------------
+When a child class inherits a method from a parent class, it override that method to change its behavior.
+static and final method cant be override
+
+class A{
+    public  int add(int a,int b){
+        return a+b;
+    }
+}
+class B extends A{
+    @override
+    public  int add(int a,int b){
+        return a*b;
+    }
+}

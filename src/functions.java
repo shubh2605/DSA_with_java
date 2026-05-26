@@ -1,6 +1,7 @@
 public class functions {
 
     public static void sum(int a,int b,int c){
+
         System.out.println(a+b+c);
     }
 
@@ -49,10 +50,11 @@ public class functions {
     }
 
     public static String greetting(String name){
+
         return "Hello "+ name;
     }
 
-    public static boolean LastsecEven(int n){
+    public static boolean LastsecEven(int n,int r){
         int count=0;
         while(n>0){
             count++;
@@ -63,7 +65,43 @@ public class functions {
         return false;
     }
 
+    public static String deciTobin(int n){
+        StringBuilder sb=new StringBuilder("");
+        while(n>0){
+            sb.append(n%2);
+            n=n/2;
+        }
+        return sb.reverse().toString();
+    }
 
+
+    public static int decimalToBinary(int n){
+        int res=0;
+        int power=1;
+        while(n>0){
+            int rem=n%2;
+            res+=rem*power;
+            power*=10;
+            n=n/2;
+        }
+        return res;
+    }
+
+
+    public static int  binTodeci(int n){
+        int res=0;
+        int power=0;
+        while(n>0){
+            res+=(n%10)*(int)Math.pow(2,power);
+            power++;
+            n=n/10;
+        }
+        return res;
+    }
+
+//    public static int octTobin(int n){
+//
+//    }
 
     public static void main(String[] args){
 //        add(2,3//these r called argumnets);
@@ -73,7 +111,10 @@ public class functions {
 //        printNum(10);
 //        System.out.println(evenSum(2,9));
 //        System.out.println(LastsecEven(124365));
-        System.out.println(greetting("Shubham"));
+//        System.out.println(greetting("Shubham"));
+//        System.out.println(deciTobin(100));
+//        System.out.println(decimalToBinary(100));
+//        System.out.println(binTodeci(1100100));
 
     }
 }

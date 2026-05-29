@@ -1,0 +1,13 @@
+what is array---
+Array is a data structure in which we store similar type of data using 0 based indexing.
+-Array declare at runtime where memeory is allocated and initialize at compile time where type checking happens
+
+Need of array???
+-contigeous memory allocation
+-easy to access
+-easy to manage
+
+int[] arr; //declaration
+int[] arr={1,2,3,4}; //initialization
+
+length of arr;arr.length //length is attribute whereas length() is method used to get length of string;

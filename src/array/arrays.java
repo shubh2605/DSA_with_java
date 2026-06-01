@@ -93,6 +93,15 @@ public class arrays {
             System.out.print(nums[i]+" ");
         }
     }
+
+    public static boolean palindrome(String name){
+        for(int i=0;i<name.length()/2;i++){
+            if(name.charAt(i)!=name.charAt(name.length()-i-1)){
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main(String args[]){
 
         int[] arr1={1,2,3};
@@ -103,6 +112,7 @@ public class arrays {
 //        System.out.println(arrayProblem2(arr));
 //        System.out.println(maxDistance(arr1));
 //        sameIndexelem(arr1,arr2);
-        resOfsub(arr1,arr2);
+//        resOfsub(arr1,arr2);
+        System.out.println(palindrome("abccba"));
     }
 }

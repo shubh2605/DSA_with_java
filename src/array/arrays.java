@@ -3,17 +3,24 @@ import java.util.*;
 import java.util.Scanner;
 
 public class arrays {
+
+    //print even numbers------------------------------
+
     public static void evenPrint(int arr[]){
         for(int i=0;i<arr.length;i++){
             if(arr[i]%2==0) System.out.print(arr[i]+" ");
         }
     }
+
+    //Linear Search return boolean-----------------------------
+
     public static boolean linearSearch(int arr[],int key){
         for(int i=0;i<arr.length;i++){
             if(arr[i]==key)return true;
         }
         return false;
     }
+    //Linear Search return position of key-----------------------------
 
     public static void linerarSearch2(int arr[],int key){
         int pos=-1;
@@ -26,6 +33,7 @@ public class arrays {
         System.out.println(pos);
     }
 
+    //second minimum index of array---------------------
 
     public static int arrayProblem2(int arr[]){
         int minLen=Integer.MAX_VALUE;
@@ -44,6 +52,7 @@ public class arrays {
         return minLen;
     }
 
+    //max distance btwn index of two equal element-------------------
     public  static void maxDistance(int[] arr){
         int len=0;
         for(int i=0; i< arr.length; i++){
@@ -56,6 +65,8 @@ public class arrays {
         System.out.println(len);
     }
 
+    //sum of two array-------------------------------
+
     public static   void sameIndexelem(int arr1[],int arr2[]){
         int n=arr1.length;
         int nums[]=new int[n];
@@ -67,6 +78,8 @@ public class arrays {
             System.out.print(nums[i]+" ");
         }
     }
+
+    //subtraction of two array------------------------
 
     public static void resOfsub(int arr1[],int arr2[]){
         int num1=0;
@@ -93,7 +106,7 @@ public class arrays {
             System.out.print(nums[i]+" ");
         }
     }
-
+    //String Palindrome or not??-------------------------
     public static boolean palindrome(String name){
         for(int i=0;i<name.length()/2;i++){
             if(name.charAt(i)!=name.charAt(name.length()-i-1)){
@@ -102,10 +115,58 @@ public class arrays {
         }
         return true;
     }
-    public static void main(String args[]){
+    //Swapping two values------------------
 
-        int[] arr1={1,2,3};
-        int[] arr2={1,0,7};
+    public static void swap(int a,int b,int arr[]){
+        int temp=arr[a];
+        arr[a]=arr[b];
+        arr[b]=temp;
+
+    }
+
+    //revese an array---------------------------
+
+    public static void reverse(int arr[]){
+        for(int i=0;i<arr.length/2;i++){
+            int st=i,end=arr.length-i-1;
+            swap(st,end,arr);
+        }
+
+        for (int i=0;i<arr.length;i++){
+            System.out.println(arr[i]+" ");
+        }
+    }
+
+    //rotate an array--------------------
+    public static void subArray(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            for(int j=i;j<arr.length;j++){
+                for(int k=i;k<=j;k++){
+                    System.out.print(arr[k]+" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+    static void rotateArr(int arr[], int d) {
+        int n=arr.length;
+        int nums[]=new int[n];
+        d=d%n;
+        for(int i=0;i<n-d;i++){
+            nums[i]=arr[i+d];
+        }
+        for(int i=n-d;i<n;i++){
+            nums[i]=arr[i-(n-d)];
+        }
+        for(int i=0;i<n;i++){
+            arr[i]=nums[i];
+        }
+    }
+
+    public static void main(String args[]){
+//
+//        int[] arr1={1,2,3};
+//        int[] arr2={1,0,7};
 
 //        System.out.println(linearSearch(arr,3));
 //        linerarSearch2(arr,3);
@@ -113,6 +174,11 @@ public class arrays {
 //        System.out.println(maxDistance(arr1));
 //        sameIndexelem(arr1,arr2);
 //        resOfsub(arr1,arr2);
-        System.out.println(palindrome("abccba"));
+//        System.out.println(palindrome("abccba"));
+//        int arr[]={4,3,1,2,5,6};
+//        reverse(arr);
+        int arr[]={4,5,0,-2,-3,1};
+        subArray(arr);
+
     }
 }
